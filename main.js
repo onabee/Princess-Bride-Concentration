@@ -6,13 +6,14 @@ console.log("linked!");
 // e  |  f  |  g  |  h
 // i  |  j  |  k  |  l
 // m  |  n  |  o  |  p
+var $squares = $('.square')
 
-var cards = [
-	[a, b, c, d],
-	[e, f, g, h],
-	[i, j, k, l],
-	[m, n, o, p],
-];
+// var cards = [
+// 	[a, b, c, d],
+// 	[e, f, g, h],
+// 	[i, j, k, l],
+// 	[m, n, o, p],
+// ];
 
 
 
