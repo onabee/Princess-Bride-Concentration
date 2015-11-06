@@ -1,7 +1,7 @@
 # The Princess Bride - Concentration game  
 
 #### Description:
-This is a game of concentration — a memory game where a player has to find matching pairs of cards and uncover the entire board.
+This is a game of concentration — a memory game where a player has to find matching pairs of cards to uncover the entire board.
 
 #### User Stories:
 1. User should see the gameboard (with back of the cards facing up)
