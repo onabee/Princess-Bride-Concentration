@@ -102,10 +102,13 @@ p {
  	border-style: solid;
  	border-width: 2px;
  	border-color: black;
- 	background-color: blue;
  	position: relative;
  	display: inline-block;
  	overflow: hidden;
+}
+
+.front {
+	background-color: red;
 }
 
 .back {
