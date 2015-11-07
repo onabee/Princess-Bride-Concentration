@@ -1,6 +1,5 @@
 console.log("linked!");
 
-
 // a  |  b  |  c  |  d  
 // e  |  f  |  g  |  h
 // i  |  j  |  k  |  l
@@ -41,7 +40,6 @@ var $vizzini = $('.vizzini');
 var cardFronts = [$wesley, $buttercup, $fezzik, $inigo, $bishop, $max, $rous, $vizzini]; //array that stores the images for the front of cards
 var $cardBack = $('.back'); //back of card when turned over
 
-// -- each character needs to be assigned to two cards in the deck*****
 var squares = [
 	[$squareA, $squareB, $squareC, $squareD],
 	[$squareE, $squareF, $squareG, $squareH],
@@ -49,6 +47,7 @@ var squares = [
 	[$squareM, $squareN, $squareO, $squareP]
 	]; // first want to save all the squares to an array for reference
 
+// -- each character needs to be assigned to two cards in the deck*****
 var saveFrontToSquares = function(){
 	var cardFronts;
 	var squares;
