@@ -41,7 +41,7 @@ var $vizzini = $('.vizzini');
 var cardFronts = [$wesley, $buttercup, $fezzik, $inigo, $bishop, $max, $rous, $vizzini]; //array that stores the images for the front of cards
 var $cardBack = $('.back'); //back of card when turned over
 
-// -- each character needs to be assigned to two cards in the deck
+// -- each character needs to be assigned to two cards in the deck*****
 var squares = [
 	[$squareA, $squareB, $squareC, $squareD],
 	[$squareE, $squareF, $squareG, $squareH],
@@ -83,12 +83,13 @@ var uncoverCard = function(event){
 
 $squareA.one('click', uncoverCard);
 
+// need to do some kind of function for firstCard and secondCard
 
 // -- when a user clicks two cards, check for a match, if no match, flip cards back. if yes, keep both cards uncovered.
 var checkForMatch = function(){
 
 	if (firstCard === secondCard) {
-		
+
 	};
 };
 
