@@ -107,12 +107,68 @@ p {
  	overflow: hidden;
 }
 
+.back {
+	background-color: blue;
+}
+
 .front {
 	background-color: red;
 }
 
-.back {
-	background-color: blue;
+.wesley {
+	background-image: url("imgs/wesley.jpeg");
+	height: 120px;
+	background-size: cover;
+	background-position: -60px;
+}
+
+.buttercup {
+	background-image: url("imgs/buttercup.jpg");
+	height: 120px;
+	background-size: cover;
+	background-position: -60px;
+}
+
+.fezzik {
+	background-image: url("imgs/fezzik.jpg");
+	height: 120px;
+	background-size: cover;
+	background-position: -60px;
+}
+
+.inigo {
+	background-image: url("imgs/inigomontoya.jpg");
+	height: 120px;
+	background-size: cover;
+	background-position: 0px;
+}
+
+.bishop {
+	background-image: url("imgs/mawwiageguy.jpg");
+	height: 120px;
+	background-size: cover;
+	background-position: -60px;
+}
+
+.max {
+	background-image: url("imgs/miraclemax.jpeg");
+	height: 120px;
+	background-size: cover;
+	background-position: -60px;
+}
+
+.rous {
+	background-image: url("imgs/rodentofunusualsize.jpg");
+	height: 120px;
+	background-size: cover;
+	background-position: -60px;
+}
+
+.vizzini {
+	background-image: url("imgs/vizzini.jpeg");
+	height: 120px;
+	background-size: cover;
+	background-position: -20px;
 }
 
 .buttons {
