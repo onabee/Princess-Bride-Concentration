@@ -46,6 +46,7 @@ var squares = [
 	[$squareI, $squareJ, $squareK, $squareL],
 	[$squareM, $squareN, $squareO, $squareP]
 	]; // first want to save all the squares to an array for reference
+	//could just use the jquery selector instead of saving as variables to dry it up
 
 // -- each character needs to be assigned to two cards in the deck*****
 var saveFrontToSquares = function(){
@@ -70,23 +71,212 @@ var shuffleCharacters = function shuffleCharacters(array) {
 
 // shuffleCharacters(cardFronts);
 
+
 // -- if a user clicks a card, it should reveal the back of the card
-var uncoverCard = function(event){
+var uncoverCardA = function(event){
   console.log(event);
 
   if ($squareA.hasClass('back')) {
       $squareA.removeClass('back');
       $squareA.addClass('vizzini');
-  };
+  }
 };
 
-$squareA.one('click', uncoverCard);
+$squareA.on('click', uncoverCardA);
+// $squareA.off('click', uncoverCardA);
+
+var uncoverCardB = function(event){
+  console.log(event);
+
+  if ($squareB.hasClass('back')) {
+      $squareB.removeClass('back');
+      $squareB.addClass('vizzini');
+  }
+};
+
+$squareB.on('click', uncoverCardB);
+// $squareB.off('click', uncoverCardB);
+
+var uncoverCardC = function(event){
+  console.log(event);
+
+  if ($squareC.hasClass('back')) {
+      $squareC.removeClass('back');
+      $squareC.addClass('vizzini');
+  }
+};
+
+$squareC.on('click', uncoverCardC);
+// $squareC.off('click', uncoverCardC);
+
+var uncoverCardD = function(event){
+  console.log(event);
+
+  if ($squareD.hasClass('back')) {
+      $squareD.removeClass('back');
+      $squareD.addClass('vizzini');
+  }
+};
+
+$squareD.on('click', uncoverCardD);
+// $squareD.off('click', uncoverCardD);
+
+var uncoverCardE = function(event){
+  console.log(event);
+
+  if ($squareE.hasClass('back')) {
+      $squareE.removeClass('back');
+      $squareE.addClass('vizzini');
+  }
+};
+
+$squareE.on('click', uncoverCardE);
+// $squareE.off('click', uncoverCardE);
+
+var uncoverCardF = function(event){
+  console.log(event);
+
+  if ($squareF.hasClass('back')) {
+      $squareF.removeClass('back');
+      $squareF.addClass('vizzini');
+  }
+};
+
+$squareF.on('click', uncoverCardF);
+// $squareF.off('click', uncoverCardF);
+
+var uncoverCardG = function(event){
+  console.log(event);
+
+  if ($squareG.hasClass('back')) {
+      $squareG.removeClass('back');
+      $squareG.addClass('vizzini');
+  }
+};
+
+$squareG.on('click', uncoverCardG);
+// $squareG.off('click', uncoverCardG);
+
+var uncoverCardH = function(event){
+  console.log(event);
+
+  if ($squareH.hasClass('back')) {
+      $squareH.removeClass('back');
+      $squareH.addClass('vizzini');
+  }
+};
+
+$squareH.on('click', uncoverCardH);
+// $squareH.off('click', uncoverCardH);
+
+var uncoverCardI = function(event){
+  console.log(event);
+
+  if ($squareI.hasClass('back')) {
+      $squareI.removeClass('back');
+      $squareI.addClass('vizzini');
+  }
+};
+
+$squareI.on('click', uncoverCardI);
+// $squareI.off('click', uncoverCardI);
+
+var uncoverCardJ = function(event){
+  console.log(event);
+
+  if ($squareJ.hasClass('back')) {
+      $squareJ.removeClass('back');
+      $squareJ.addClass('vizzini');
+  }
+};
+
+$squareJ.on('click', uncoverCardJ);
+// $squareJ.off('click', uncoverCardJ);
+
+var uncoverCardK = function(event){
+  console.log(event);
+
+  if ($squareK.hasClass('back')) {
+      $squareK.removeClass('back');
+      $squareK.addClass('vizzini');
+  }
+};
+
+$squareK.on('click', uncoverCardK);
+// $squareK.off('click', uncoverCardK);
+
+var uncoverCardL = function(event){
+  console.log(event);
+
+  if ($squareL.hasClass('back')) {
+      $squareL.removeClass('back');
+      $squareL.addClass('vizzini');
+  }
+};
+
+$squareL.on('click', uncoverCardL);
+// $squareL.off('click', uncoverCardL);
+
+var uncoverCardM = function(event){
+  console.log(event);
+
+  if ($squareM.hasClass('back')) {
+      $squareM.removeClass('back');
+      $squareM.addClass('vizzini');
+  }
+};
+
+$squareM.on('click', uncoverCardM);
+// $squareM.off('click', uncoverCardM);
+
+var uncoverCardN = function(event){
+  console.log(event);
+
+  if ($squareN.hasClass('back')) {
+      $squareN.removeClass('back');
+      $squareN.addClass('vizzini');
+  }
+};
+
+$squareN.on('click', uncoverCardN);
+// $squareN.off('click', uncoverCardN);
+
+var uncoverCardO = function(event){
+  console.log(event);
+
+  if ($squareO.hasClass('back')) {
+      $squareO.removeClass('back');
+      $squareO.addClass('vizzini');
+  }
+};
+
+$squareO.on('click', uncoverCardO);
+// $squareO.off('click', uncoverCardO);
+
+var uncoverCardP = function(event){
+  console.log(event);
+
+  if ($squareP.hasClass('back')) {
+      $squareP.removeClass('back');
+      $squareP.addClass('vizzini');
+  }
+};
+
+$squareP.on('click', uncoverCardP);
+// $squareP.off('click', uncoverCardP);
 
 // need to do some kind of function for firstCard and secondCard
 
+// choosing a card
+var chooseCard = function(square){
+
+}; //square will be the index of squares array
+
+
+
 // -- when a user clicks two cards, check for a match, if no match, flip cards back. if yes, keep both cards uncovered.
 var checkForMatch = function(){
-
+  var matches;
 	if (firstCard === secondCard) {
 
 	};
