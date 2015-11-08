@@ -254,12 +254,27 @@ var saveFrontToSquares = function(){
 
 
 // now that a character has been assigned to cards and shows up on clicks, need to make sure the user can't uncover more than two cards at a time. 
+var clicks = 0;
+
+
 
 // need to do some kind of function for firstCard and secondCard
 
 // choosing a card
 var chooseCard = function(square){ //square will be the index of squares array
- 
+ //if 2 clicks have been made
+ // do nothing
+
+ //if no clicks,
+ //store card index in firstCard
+ //show image corresponding to first card clicked
+ //set clicks to 1
+
+ // else
+ // set clicks to 2
+ // store card index in secondCard var
+ // show image corresponding to second card clicked
+
 }; 
 
 
@@ -272,7 +287,7 @@ var checkForMatch = function(){
 	};
 };
 
-
+// have a set timeout for when it's not a match
 
 //
 
