@@ -244,14 +244,6 @@ var uncoverCardP = function(event){x
 $squareP.on('click', uncoverCardP);
 // $squareP.off('click', uncoverCardP);
 
-var uncoverCard = function(event){
-	console.log(event);
-
-	if (squares[i].hasClass('back')) {
-		squares[i].removeClass('back');
-		squares[i].addClass(cardFronts[i]);
-	}
-};
 
 // -- when a user clicks two cards, check for a match, if no match, flip cards back. if yes, keep both cards uncovered.
 var checkForMatch = function(){
