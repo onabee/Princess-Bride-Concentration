@@ -232,7 +232,7 @@ var uncoverCardO = function(event){
 $squareO.on('click', uncoverCardO);
 // $squareO.off('click', uncoverCardO);
 
-var uncoverCardP = function(event){
+var uncoverCardP = function(event){x
   console.log(event);
 
   if ($squareP.hasClass('back')) {
@@ -244,13 +244,28 @@ var uncoverCardP = function(event){
 $squareP.on('click', uncoverCardP);
 // $squareP.off('click', uncoverCardP);
 
-var saveFrontToSquares = function(){
-	var cardFronts;
-	var squares;
-	for (var i = 0; i < cardFronts.length; i++) { // goal is to iterate through cardFronts, grab one value (make sure that value isn't available in further iterations)
-		var twoSquares = function(){}; // take the value grabbed from above and assign it to two random squares. (make sure those squares are not available anymore)
-	};
+var uncoverCard = function(event){
+	console.log(event);
+
+	if (squares[i].hasClass('back')) {
+		squares[i].removeClass('back');
+		squares[i].addClass(cardFronts[i]);
+	}
 };
+
+var findMatch = function(event) {
+	console.log(event);
+
+	if firstCard === secondCard
+}
+
+// var saveFrontToSquares = function(){
+// 	var cardFronts;
+// 	var squares;
+// 	for (var i = 0; i < cardFronts.length; i++) { // goal is to iterate through cardFronts, grab one value (make sure that value isn't available in further iterations)
+// 		var twoSquares = function(){}; // take the value grabbed from above and assign it to two random squares. (make sure those squares are not available anymore)
+// 	};
+// };
 
 
 // now that a character has been assigned to cards and shows up on clicks, need to make sure the user can't uncover more than two cards at a time. 
