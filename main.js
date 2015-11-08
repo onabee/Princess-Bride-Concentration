@@ -253,11 +253,17 @@ var uncoverCard = function(event){
 	}
 };
 
-var findMatch = function(event) {
-	console.log(event);
+// -- when a user clicks two cards, check for a match, if no match, flip cards back. if yes, keep both cards uncovered.
+var checkForMatch = function(){
+  var matches;
+	if (firstCard === secondCard) {
+		//leave cards uncovered if match
+	} else {
+		//cover cards  back if no match
+		squares[i].removeClass(cardFronts[i])
+	}
+};
 
-	if firstCard === secondCard
-}
 
 // var saveFrontToSquares = function(){
 // 	var cardFronts;
@@ -291,24 +297,6 @@ var chooseCard = function(square){ //square will be the index of squares array
  // show image corresponding to second card clicked
 
 }; 
-
-
-
-// -- when a user clicks two cards, check for a match, if no match, flip cards back. if yes, keep both cards uncovered.
-var checkForMatch = function(){
-  var matches;
-	if (firstCard === secondCard) {
-
-	};
-};
-
-// have a set timeout for when it's not a match
-
-//
-
-
-
-
 
 
 // -- randomize which character will be on which cards (this can be at the end when you figure out everything else. this is for when you hit reset probably)
