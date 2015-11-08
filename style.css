@@ -107,10 +107,6 @@ p {
  	overflow: hidden;
 }
 
-.back {
-	background-color: blue;
-}
-
 .front {
 	background-color: red;
 }
@@ -169,6 +165,10 @@ p {
 	height: 120px;
 	background-size: cover;
 	background-position: -20px;
+}
+
+.back {
+	background-color: blue;
 }
 
 .buttons {

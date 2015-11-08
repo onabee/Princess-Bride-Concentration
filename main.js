@@ -48,37 +48,16 @@ var squares = [
 	]; // first want to save all the squares to an array for reference
 	//could just use the jquery selector instead of saving as variables to dry it up
 
+
 // -- each character needs to be assigned to two cards in the deck*****
-var saveFrontToSquares = function(){
-	var cardFronts;
-	var squares;
-	for (var i = 0; i < cardFronts.length; i++) { // goal is to iterate through cardFronts, grab one value (make sure that value isn't available in further iterations)
-		var twoSquares = function(){}; // take the value grabbed from above and assign it to two random squares. (make sure those squares are not available anymore)
-	};
-};
-
-
-// -- randomize which character will be on which cards
-var shuffleCharacters = function shuffleCharacters(array) {
-    for (var i = array.length - 1; i > 0; i--) { //Loops through each of the values between the array length and one, decrementing the loop variable for each iteration.
-        var j = Math.floor(Math.random() * (i + 1)); //math floor rounds to nearest integer so you don't get a decimal. math random will give a number between 0 and whatever the index (i) is. 
-        var temporaryIndex = array[i];
-        array[i] = array[j];
-        array[j] = temporaryIndex;
-    };
-    return array;
-};
-
-// shuffleCharacters(cardFronts);
-
-
+// first do uncover card functions and add which classes will be revealed BEFORE working on shuffling.
 // -- if a user clicks a card, it should reveal the back of the card
 var uncoverCardA = function(event){
   console.log(event);
 
   if ($squareA.hasClass('back')) {
       $squareA.removeClass('back');
-      $squareA.addClass('vizzini');
+      $squareA.addClass('bishop');
   }
 };
 
@@ -90,7 +69,7 @@ var uncoverCardB = function(event){
 
   if ($squareB.hasClass('back')) {
       $squareB.removeClass('back');
-      $squareB.addClass('vizzini');
+      $squareB.addClass('wesley');
   }
 };
 
@@ -102,7 +81,7 @@ var uncoverCardC = function(event){
 
   if ($squareC.hasClass('back')) {
       $squareC.removeClass('back');
-      $squareC.addClass('vizzini');
+      $squareC.addClass('wesley');
   }
 };
 
@@ -114,7 +93,7 @@ var uncoverCardD = function(event){
 
   if ($squareD.hasClass('back')) {
       $squareD.removeClass('back');
-      $squareD.addClass('vizzini');
+      $squareD.addClass('buttercup');
   }
 };
 
@@ -126,7 +105,7 @@ var uncoverCardE = function(event){
 
   if ($squareE.hasClass('back')) {
       $squareE.removeClass('back');
-      $squareE.addClass('vizzini');
+      $squareE.addClass('bishop');
   }
 };
 
@@ -150,7 +129,7 @@ var uncoverCardG = function(event){
 
   if ($squareG.hasClass('back')) {
       $squareG.removeClass('back');
-      $squareG.addClass('vizzini');
+      $squareG.addClass('inigo');
   }
 };
 
@@ -162,7 +141,7 @@ var uncoverCardH = function(event){
 
   if ($squareH.hasClass('back')) {
       $squareH.removeClass('back');
-      $squareH.addClass('vizzini');
+      $squareH.addClass('fezzik');
   }
 };
 
@@ -174,7 +153,7 @@ var uncoverCardI = function(event){
 
   if ($squareI.hasClass('back')) {
       $squareI.removeClass('back');
-      $squareI.addClass('vizzini');
+      $squareI.addClass('max');
   }
 };
 
@@ -186,7 +165,7 @@ var uncoverCardJ = function(event){
 
   if ($squareJ.hasClass('back')) {
       $squareJ.removeClass('back');
-      $squareJ.addClass('vizzini');
+      $squareJ.addClass('buttercup');
   }
 };
 
@@ -198,7 +177,7 @@ var uncoverCardK = function(event){
 
   if ($squareK.hasClass('back')) {
       $squareK.removeClass('back');
-      $squareK.addClass('vizzini');
+      $squareK.addClass('rous');
   }
 };
 
@@ -210,7 +189,7 @@ var uncoverCardL = function(event){
 
   if ($squareL.hasClass('back')) {
       $squareL.removeClass('back');
-      $squareL.addClass('vizzini');
+      $squareL.addClass('max');
   }
 };
 
@@ -222,7 +201,7 @@ var uncoverCardM = function(event){
 
   if ($squareM.hasClass('back')) {
       $squareM.removeClass('back');
-      $squareM.addClass('vizzini');
+      $squareM.addClass('fezzik');
   }
 };
 
@@ -234,7 +213,7 @@ var uncoverCardN = function(event){
 
   if ($squareN.hasClass('back')) {
       $squareN.removeClass('back');
-      $squareN.addClass('vizzini');
+      $squareN.addClass('inigo');
   }
 };
 
@@ -258,12 +237,35 @@ var uncoverCardP = function(event){
 
   if ($squareP.hasClass('back')) {
       $squareP.removeClass('back');
-      $squareP.addClass('vizzini');
+      $squareP.addClass('rous');
   }
 };
 
 $squareP.on('click', uncoverCardP);
 // $squareP.off('click', uncoverCardP);
+
+var saveFrontToSquares = function(){
+	var cardFronts;
+	var squares;
+	for (var i = 0; i < cardFronts.length; i++) { // goal is to iterate through cardFronts, grab one value (make sure that value isn't available in further iterations)
+		var twoSquares = function(){}; // take the value grabbed from above and assign it to two random squares. (make sure those squares are not available anymore)
+	};
+};
+
+
+// -- randomize which character will be on which cards
+var shuffleCharacters = function shuffleCharacters(array) {
+    for (var i = array.length - 1; i > 0; i--) { //Loops through each of the values between the array length and one, decrementing the loop variable for each iteration.
+        var j = Math.floor(Math.random() * (i + 1)); //math floor rounds to nearest integer so you don't get a decimal. math random will give a number between 0 and whatever the index (i) is. 
+        var temporaryIndex = array[i];
+        array[i] = array[j];
+        array[j] = temporaryIndex;
+    };
+    return array;
+};
+
+// shuffleCharacters(cardFronts);
+
 
 // need to do some kind of function for firstCard and secondCard
 
