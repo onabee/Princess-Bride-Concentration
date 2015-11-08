@@ -253,26 +253,14 @@ var saveFrontToSquares = function(){
 };
 
 
-// -- randomize which character will be on which cards
-var shuffleCharacters = function shuffleCharacters(array) {
-    for (var i = array.length - 1; i > 0; i--) { //Loops through each of the values between the array length and one, decrementing the loop variable for each iteration.
-        var j = Math.floor(Math.random() * (i + 1)); //math floor rounds to nearest integer so you don't get a decimal. math random will give a number between 0 and whatever the index (i) is. 
-        var temporaryIndex = array[i];
-        array[i] = array[j];
-        array[j] = temporaryIndex;
-    };
-    return array;
-};
-
-// shuffleCharacters(cardFronts);
-
+// now that a character has been assigned to cards and shows up on clicks, need to make sure the user can't uncover more than two cards at a time. 
 
 // need to do some kind of function for firstCard and secondCard
 
 // choosing a card
-var chooseCard = function(square){
-
-}; //square will be the index of squares array
+var chooseCard = function(square){ //square will be the index of squares array
+ 
+}; 
 
 
 
@@ -291,6 +279,20 @@ var checkForMatch = function(){
 
 
 
+
+
+// -- randomize which character will be on which cards (this can be at the end when you figure out everything else. this is for when you hit reset probably)
+var shuffleCharacters = function shuffleCharacters(array) {
+    for (var i = array.length - 1; i > 0; i--) { //Loops through each of the values between the array length and one, decrementing the loop variable for each iteration.
+        var j = Math.floor(Math.random() * (i + 1)); //math floor rounds to nearest integer so you don't get a decimal. math random will give a number between 0 and whatever the index (i) is. 
+        var temporaryIndex = array[i];
+        array[i] = array[j];
+        array[j] = temporaryIndex;
+    };
+    return array;
+};
+
+// shuffleCharacters(cardFronts);
 
 
 
