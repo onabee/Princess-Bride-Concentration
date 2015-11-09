@@ -377,7 +377,7 @@ var checkForMatch = function($currentCard, currentCardCharacterClass) {
             $currentCard.addClass('back');
         }
 
-        clicks = 0;
+        clicks === 0;
     }
 };
 
