@@ -63,7 +63,7 @@ var uncoverCardA = function(event){
       $squareA.addClass('bishop');
   }
 
-  pairs.push(event.target);
+  
 };
 
 
@@ -75,7 +75,7 @@ var uncoverCardB = function(event){
       $squareB.addClass('wesley');
   }
 
-  pairs.push(event.target);
+  
 };
 
 var uncoverCardC = function(event){
@@ -84,7 +84,7 @@ var uncoverCardC = function(event){
   if ($squareC.hasClass('back')) {
       $squareC.removeClass('back');
       $squareC.addClass('wesley');
-  } pairs.push(event.target);
+  } 
 };
 
 var uncoverCardD = function(event){
@@ -93,7 +93,7 @@ var uncoverCardD = function(event){
   if ($squareD.hasClass('back')) {
       $squareD.removeClass('back');
       $squareD.addClass('buttercup');
-  } pairs.push(event.target);
+  } 
 };
 
 var uncoverCardE = function(event){
@@ -102,7 +102,7 @@ var uncoverCardE = function(event){
   if ($squareE.hasClass('back')) {
       $squareE.removeClass('back');
       $squareE.addClass('bishop');
-  } pairs.push(event.target);
+  } 
 };
 
 var uncoverCardF = function(event){
@@ -111,7 +111,7 @@ var uncoverCardF = function(event){
   if ($squareF.hasClass('back')) {
       $squareF.removeClass('back');
       $squareF.addClass('vizzini');
-  } pairs.push(event.target);
+  } 
 };
 
 $squareA.on('click', uncoverCardA);
@@ -127,7 +127,7 @@ var uncoverCardG = function(event){
   if ($squareG.hasClass('back')) {
       $squareG.removeClass('back');
       $squareG.addClass('inigo');
-  } pairs.push(event.target);
+  } 
 };
 
 $squareG.on('click', uncoverCardG);
@@ -138,7 +138,7 @@ var uncoverCardH = function(event){
   if ($squareH.hasClass('back')) {
       $squareH.removeClass('back');
       $squareH.addClass('fezzik');
-  } pairs.push(event.target);
+  } 
 };
 
 $squareH.on('click', uncoverCardH);
@@ -149,7 +149,7 @@ var uncoverCardI = function(event){
   if ($squareI.hasClass('back')) {
       $squareI.removeClass('back');
       $squareI.addClass('max');
-  } pairs.push(event.target);
+  } 
 };
 
 $squareI.on('click', uncoverCardI);
@@ -160,7 +160,7 @@ var uncoverCardJ = function(event){
   if ($squareJ.hasClass('back')) {
       $squareJ.removeClass('back');
       $squareJ.addClass('buttercup');
-  } pairs.push(event.target);
+  } 
 };
 
 $squareJ.on('click', uncoverCardJ);
@@ -171,7 +171,7 @@ var uncoverCardK = function(event){
   if ($squareK.hasClass('back')) {
       $squareK.removeClass('back');
       $squareK.addClass('rous');
-  } pairs.push(event.target);
+  } 
 };
 
 $squareK.on('click', uncoverCardK);
@@ -182,7 +182,7 @@ var uncoverCardL = function(event){
   if ($squareL.hasClass('back')) {
       $squareL.removeClass('back');
       $squareL.addClass('max');
-  } pairs.push(event.target);
+  } 
 };
 
 $squareL.on('click', uncoverCardL);
@@ -193,7 +193,7 @@ var uncoverCardM = function(event){
   if ($squareM.hasClass('back')) {
       $squareM.removeClass('back');
       $squareM.addClass('fezzik');
-  } pairs.push(event.target);
+  } 
 };
 
 $squareM.on('click', uncoverCardM);
@@ -204,7 +204,7 @@ var uncoverCardN = function(event){
   if ($squareN.hasClass('back')) {
       $squareN.removeClass('back');
       $squareN.addClass('inigo');
-  } pairs.push(event.target);
+  } 
 };
 
 $squareN.on('click', uncoverCardN);
@@ -215,7 +215,7 @@ var uncoverCardO = function(event){
   if ($squareO.hasClass('back')) {
       $squareO.removeClass('back');
       $squareO.addClass('vizzini');
-  } pairs.push(event.target);
+  }
 };
 
 $squareO.on('click', uncoverCardO);
@@ -235,7 +235,7 @@ var uncoverCardP = function(event){
 
   checkForMatch($squareP, characterClass);
 
-  pairs.push(event.target);
+ 
 };
 
 $squareP.on('click', uncoverCardP);
