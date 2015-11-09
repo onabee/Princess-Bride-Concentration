@@ -58,11 +58,16 @@ var squares = [
 var uncoverCardA = function(event){
   console.log(event);
 
+  var characterClass = 'bishop';
+
+  clicks++;
+
   if ($squareA.hasClass('back')) {
+      $squareA.addClass(characterClass);
       $squareA.removeClass('back');
-      $squareA.addClass('bishop');
   }
 
+  checkForMatch($squareG, characterClass);
   
 };
 
@@ -70,155 +75,235 @@ var uncoverCardA = function(event){
 var uncoverCardB = function(event){
   console.log(event);
 
-  if ($squareB.hasClass('back')) {
-      $squareB.removeClass('back');
-      $squareB.addClass('wesley');
-  }
+  var characterClass = 'wesley';
 
+  clicks++;
+
+  if ($squareB.hasClass('back')) {
+      $squareB.addClass(characterClass);
+      $squareB.removeClass('back');
+  }
+  
+  checkForMatch($squareB, characterClass);
   
 };
 
 var uncoverCardC = function(event){
   console.log(event);
 
+  var characterClass = 'wesley';
+
+  clicks++;
+
   if ($squareC.hasClass('back')) {
+      $squareC.addClass(characterClass);
       $squareC.removeClass('back');
-      $squareC.addClass('wesley');
   } 
+
+  checkForMatch($squareC, characterClass);
+
 };
 
 var uncoverCardD = function(event){
   console.log(event);
 
+  var characterClass = 'buttercup';
+
+  clicks++;
+
   if ($squareD.hasClass('back')) {
+      $squareD.addClass(characterClass);
       $squareD.removeClass('back');
-      $squareD.addClass('buttercup');
   } 
+
+  checkForMatch($squareD, characterClass);
+
 };
 
 var uncoverCardE = function(event){
   console.log(event);
 
+  var characterClass = 'bishop';
+
+  clicks++;
+
   if ($squareE.hasClass('back')) {
+      $squareE.addClass(characterClass);
       $squareE.removeClass('back');
-      $squareE.addClass('bishop');
   } 
+
+  checkForMatch($squareE, characterClass);
+
 };
 
 var uncoverCardF = function(event){
   console.log(event);
 
+  var characterClass = 'vizzini';
+
+  clicks++;
+
   if ($squareF.hasClass('back')) {
+      $squareF.addClass(characterClass);
       $squareF.removeClass('back');
-      $squareF.addClass('vizzini');
   } 
+
+  checkForMatch($squareF, characterClass);
+
 };
 
-$squareA.on('click', uncoverCardA);
-$squareB.on('click', uncoverCardB);
-$squareC.on('click', uncoverCardC);
-$squareD.on('click', uncoverCardD);
-$squareE.on('click', uncoverCardE);
-$squareF.on('click', uncoverCardF);
 
 var uncoverCardG = function(event){
   console.log(event);
 
+  var characterClass = 'inigo';
+
+  clicks++;
+
   if ($squareG.hasClass('back')) {
+      $squareG.addClass(characterClass);
       $squareG.removeClass('back');
-      $squareG.addClass('inigo');
   } 
+
+  checkForMatch($squareG, characterClass);
+
 };
 
-$squareG.on('click', uncoverCardG);
 
 var uncoverCardH = function(event){
   console.log(event);
 
+  var characterClass = 'fezzik';
+
+  clicks++;
+
   if ($squareH.hasClass('back')) {
+      $squareH.addClass(characterClass);
       $squareH.removeClass('back');
-      $squareH.addClass('fezzik');
   } 
+
+  checkForMatch($squareH, characterClass);
+
 };
 
-$squareH.on('click', uncoverCardH);
 
 var uncoverCardI = function(event){
   console.log(event);
 
-  if ($squareI.hasClass('back')) {
-      $squareI.removeClass('back');
-      $squareI.addClass('max');
-  } 
-};
+  var characterClass = 'max';
 
-$squareI.on('click', uncoverCardI);
+  clicks++;
+
+  if ($squareI.hasClass('back')) {
+      $squareI.addClass(characterClass);
+      $squareI.removeClass('back');
+  } 
+
+  checkForMatch($squareI, characterClass);
+
+};
 
 var uncoverCardJ = function(event){
   console.log(event);
 
+  var characterClass = 'buttercup';
+
+  clicks++;
+
   if ($squareJ.hasClass('back')) {
+      $squareJ.addClass(characterClass);
       $squareJ.removeClass('back');
-      $squareJ.addClass('buttercup');
   } 
+
+  checkForMatch($squareJ, characterClass);
+
 };
 
-$squareJ.on('click', uncoverCardJ);
 
 var uncoverCardK = function(event){
   console.log(event);
 
+  var characterClass = 'rous';
+
+  clicks++;
+
   if ($squareK.hasClass('back')) {
+      $squareK.addClass(characterClass);
       $squareK.removeClass('back');
-      $squareK.addClass('rous');
   } 
+
+  checkForMatch($squareK, characterClass);
+
 };
 
-$squareK.on('click', uncoverCardK);
 
 var uncoverCardL = function(event){
   console.log(event);
+  
+  var characterClass = 'max';
+
+  clicks++;
 
   if ($squareL.hasClass('back')) {
+      $squareL.addClass(characterClass);
       $squareL.removeClass('back');
-      $squareL.addClass('max');
-  } 
+  }
+
+ checkForMatch($squareL, characterClass);
+
 };
 
-$squareL.on('click', uncoverCardL);
 
 var uncoverCardM = function(event){
   console.log(event);
+  
+  var characterClass = 'fezzik';
+
+  clicks++;
 
   if ($squareM.hasClass('back')) {
+      $squareM.addClass(characterClass);
       $squareM.removeClass('back');
-      $squareM.addClass('fezzik');
   } 
+
+ checkForMatch($squareM, characterClass);
+
 };
 
-$squareM.on('click', uncoverCardM);
 
 var uncoverCardN = function(event){
   console.log(event);
+  
+  var characterClass = 'inigo';
+
+  clicks++;
 
   if ($squareN.hasClass('back')) {
+      $squareN.addClass(characterClass);
       $squareN.removeClass('back');
-      $squareN.addClass('inigo');
   } 
+
+  checkForMatch($squareN, characterClass);
+
 };
 
-$squareN.on('click', uncoverCardN);
 
 var uncoverCardO = function(event){
   console.log(event);
+  
+  var characterClass = 'vizzini';
+
+  clicks++;
 
   if ($squareO.hasClass('back')) {
+      $squareO.addClass(characterClass);
       $squareO.removeClass('back');
-      $squareO.addClass('vizzini');
   }
+
+  checkForMatch($squareO, characterClass);
+
 };
 
-$squareO.on('click', uncoverCardO);
 
 var uncoverCardP = function(event){
   console.log(event);
@@ -227,7 +312,6 @@ var uncoverCardP = function(event){
 
   clicks++;
 
-
   if ($squareP.hasClass('back')) {
       $squareP.addClass(characterClass);
       $squareP.removeClass('back');
@@ -235,9 +319,23 @@ var uncoverCardP = function(event){
 
   checkForMatch($squareP, characterClass);
 
- 
 };
 
+$squareA.on('click', uncoverCardA);
+$squareB.on('click', uncoverCardB);
+$squareC.on('click', uncoverCardC);
+$squareD.on('click', uncoverCardD);
+$squareE.on('click', uncoverCardE);
+$squareF.on('click', uncoverCardF);
+$squareG.on('click', uncoverCardG);
+$squareH.on('click', uncoverCardH);
+$squareI.on('click', uncoverCardI);
+$squareJ.on('click', uncoverCardJ);
+$squareK.on('click', uncoverCardK);
+$squareL.on('click', uncoverCardL);
+$squareM.on('click', uncoverCardM);
+$squareN.on('click', uncoverCardN);
+$squareO.on('click', uncoverCardO);
 $squareP.on('click', uncoverCardP);
 
 // !!!! now that a character has been assigned to cards and shows up on clicks, need to make sure the user can't uncover more than two cards at a time. 
