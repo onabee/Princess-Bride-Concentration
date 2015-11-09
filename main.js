@@ -1,5 +1,8 @@
 console.log("linked!");
 
+// var themeSong = new Audio("file.wav"); // buffers automatically when created
+// themeSong.play();
+
 // a  |  b  |  c  |  d  
 // e  |  f  |  g  |  h
 // i  |  j  |  k  |  l
@@ -376,11 +379,20 @@ var checkForMatch = function($currentCard, currentCardCharacterClass) {
             $currentCard.removeClass(currentCardCharacterClass);
             $currentCard.addClass('back');
         }
-
-        clicks === 0;
+        clicks = 0;
     }
 };
 
+// var firstCard = function(event) {
+//   event.target.removeClass('back');
+//   var saveEventTar = event.target;
+//   characterClass
+// }
+
+
+// var secondCard = function(event) {
+//   event.target.uncoverCard 
+// }
 
 
 // var saveFrontToSquares = function(){
@@ -392,27 +404,27 @@ var checkForMatch = function($currentCard, currentCardCharacterClass) {
 // need to do some kind of function for firstCard and secondCard?
 
 // choosing a card
-var chooseCard = function(square){ //square will be the index of squares array
- //if 2 clicks have been made
- if (clicks = 2){
-    return checkForMatch();
- }
- // check if the cards match
+// var chooseCard = function(square){ //square will be the index of squares array
+//  //if 2 clicks have been made
+//  if (clicks = 2){
+//     return checkForMatch();
+//  }
+//  // check if the cards match
 
- //if no clicks,
- if (clicks = 0){
+//  //if no clicks,
+//  if (clicks = 0){
 
- }
- //store card index of clicked div in firstCard
- //show image corresponding to first card clicked
- //set clicks to 1
+//  }
+//  //store card index of clicked div in firstCard
+//  //show image corresponding to first card clicked
+//  //set clicks to 1
 
- // else
- // set clicks to 2
- // store card index in secondCard var
- // show image corresponding to second card clicked
+//  // else
+//  // set clicks to 2
+//  // store card index in secondCard var
+//  // show image corresponding to second card clicked
 
-}; 
+// }; 
 
 
 // -- randomize which character will be on which cards (this can be at the end when you figure out everything else. this is for when you hit reset probably)
