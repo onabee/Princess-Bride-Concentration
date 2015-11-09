@@ -232,7 +232,7 @@ var uncoverCardO = function(event){
 $squareO.on('click', uncoverCardO);
 // $squareO.off('click', uncoverCardO);
 
-var uncoverCardP = function(event){x
+var uncoverCardP = function(event){
   console.log(event);
 
   if ($squareP.hasClass('back')) {
@@ -244,11 +244,39 @@ var uncoverCardP = function(event){x
 $squareP.on('click', uncoverCardP);
 // $squareP.off('click', uncoverCardP);
 
+//have empty array of card pairs to push cards that have been clicked into
+var pairs = [];
+
+var compareCards = function(square) {
+	if (event.target.hasClass('rous')){
+		pairs.push(square);
+	} else if (event.target.hasClass('vizzini')){
+		pairs.push(square);
+	} else if (event.target.hasClass('inigo')){
+		pairs.push(square);
+	} else if (event.target.hasClass('bishop')){
+		pairs.push(square);
+	} else if (event.target.hasClass('fezzik')){
+		pairs.push(square);
+	} else if (event.target.hasClass('max')){
+		pairs.push(square);
+	} else if (event.target.hasClass('buttercup')){
+		pairs.push(square);
+	} else if (event.target.hasClass('wesley')){
+		pairs.push(square);
+	} else if (event.target.hasClass('rous')){
+		pairs.push(square);
+	} else {
+		return square;
+	}
+};
 
 // -- when a user clicks two cards, check for a match, if no match, flip cards back. if yes, keep both cards uncovered.
 var checkForMatch = function(){
   var matches;
-	if (firstCard === secondCard) {
+  var paira
+	if (pairs[0] === pairs[1]) {
+		return matches++
 		//leave cards uncovered if match
 	} else {
 		//cover cards  back if no match
@@ -303,16 +331,6 @@ var shuffleCharacters = function shuffleCharacters(array) {
 };
 
 // shuffleCharacters(cardFronts);
-
-
-
-
-
-
-
-
-
-
 
 
 
