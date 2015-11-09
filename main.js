@@ -341,23 +341,6 @@ $squareN.on('click', uncoverCardN);
 $squareO.on('click', uncoverCardO);
 $squareP.on('click', uncoverCardP);
 
-// !!!! now that a character has been assigned to cards and shows up on clicks, need to make sure the user can't uncover more than two cards at a time. 
-
-
-// -- when a user clicks two cards, check for a match, if no match, flip cards back. if yes, keep both cards uncovered.
-// var checkForMatch = function(){
-//     if (pairs[0].classList === pairs[1].classList) {
-//         matches++
-//         pairs.length = 0;
-//         return 
-//         //leave cards uncovered if match
-//         //also want to empty the pairs array so new cards can be pushed in to check for a match
-//     } else {
-//         //cover cards back if no match
-//         squares[i].removeClass(cardFronts[i])
-//     }
-// };
-
 
 var previousCardCharacterClass;
 var $previousCard;
@@ -390,55 +373,11 @@ var checkForMatch = function($currentCard, currentCardCharacterClass) {
             matches++;
         } else {
             // turn the cards back around
-            window.setTimeout(flipCard, 3000);
+            window.setTimeout(flipCard, 2000);
         }
         clicks = 0;
     }
 };
-
-
-// var firstCard = function(event) {
-//   event.target.removeClass('back');
-//   var saveEventTar = event.target;
-//   characterClass
-// }
-
-
-// var secondCard = function(event) {
-//   event.target.uncoverCard 
-// }
-
-
-// var saveFrontToSquares = function(){
-//  for (var i = 0; i < cardFronts.length; i++) { // goal is to iterate through cardFronts, grab one value (make sure that value isn't available in further iterations)
-//      var twoSquares = function(){}; // take the value grabbed from above and assign it to two random squares. (make sure those squares are not available anymore)
-//  };
-// };
-
-// need to do some kind of function for firstCard and secondCard?
-
-// choosing a card
-// var chooseCard = function(square){ //square will be the index of squares array
-//  //if 2 clicks have been made
-//  if (clicks = 2){
-//     return checkForMatch();
-//  }
-//  // check if the cards match
-
-//  //if no clicks,
-//  if (clicks = 0){
-
-//  }
-//  //store card index of clicked div in firstCard
-//  //show image corresponding to first card clicked
-//  //set clicks to 1
-
-//  // else
-//  // set clicks to 2
-//  // store card index in secondCard var
-//  // show image corresponding to second card clicked
-
-// }; 
 
 
 // -- randomize which character will be on which cards (this can be at the end when you figure out everything else. this is for when you hit reset probably)
