@@ -360,6 +360,16 @@ $squareP.on('click', uncoverCardP);
 
 
 var previousCardCharacterClass;
+var $previousCard;
+var $currentCardMemo;
+var currentCardCharacterClassMemo;
+
+var flipCard = function(){
+    $previousCard.removeClass(previousCardCharacterClass);
+            $previousCard.addClass('back');
+            $currentCardMemo.removeClass(currentCardCharacterClassMemo);
+            $currentCardMemo.addClass('back');
+}
 
 var checkForMatch = function($currentCard, currentCardCharacterClass) {
 
@@ -368,7 +378,11 @@ var checkForMatch = function($currentCard, currentCardCharacterClass) {
         // no previousCard
         // adopt the character class of the card that has been clicked
         previousCardCharacterClass = currentCardCharacterClass;
+        $previousCard = $currentCard;
     } else if (clicks === 2) {
+        $currentCardMemo = $currentCard;
+        currentCardCharacterClassMemo = currentCardCharacterClass;
+
         // if second card of a pair is clicked
         // compare previous card and current card
         // do they have matching character classes
@@ -376,12 +390,12 @@ var checkForMatch = function($currentCard, currentCardCharacterClass) {
             matches++;
         } else {
             // turn the cards back around
-            $currentCard.removeClass(currentCardCharacterClass);
-            $currentCard.addClass('back');
+            window.setTimeout(flipCard, 3000);
         }
         clicks = 0;
     }
 };
+
 
 // var firstCard = function(event) {
 //   event.target.removeClass('back');
