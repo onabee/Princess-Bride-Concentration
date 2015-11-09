@@ -37,23 +37,24 @@ var $cardBack = $('.back'); //back of card when turned over
 
 //have empty array of card pairs to push cards that have been clicked into
 var pairs = [];
-var clicks; // how many times has the user clicked?
-var matches; //how many matches have been made
+var clicks = 0; // how many times has the user clicked?
+var matches = 0; //how many matches have been made
 var firstCard; 
 var secondCard;
+var possibleMatches = 8;
 
 var squares = [
-	[$squareA, $squareB, $squareC, $squareD],
-	[$squareE, $squareF, $squareG, $squareH],
-	[$squareI, $squareJ, $squareK, $squareL],
-	[$squareM, $squareN, $squareO, $squareP]
-	]; // first want to save all the squares to an array for reference
-	//could just use the jquery selector instead of saving as variables to dry it up
+    [$squareA, $squareB, $squareC, $squareD],
+    [$squareE, $squareF, $squareG, $squareH],
+    [$squareI, $squareJ, $squareK, $squareL],
+    [$squareM, $squareN, $squareO, $squareP]
+    ]; // first want to save all the squares to an array for reference
+    //could just use the jquery selector instead of saving as variables to dry it up
 
 
 // -- each character needs to be assigned to two cards in the deck*****
 // first do uncover card functions and add which classes will be revealed BEFORE working on shuffling.
-// -- if a user clicks a card, it should reveal the back of the card
+// -- if a user clicks a card, it should reveal the front of the card
 var uncoverCardA = function(event){
   console.log(event);
 
@@ -61,10 +62,10 @@ var uncoverCardA = function(event){
       $squareA.removeClass('back');
       $squareA.addClass('bishop');
   }
+
+  pairs.push(event.target);
 };
 
-$squareA.on('click', uncoverCardA);
-// $squareA.off('click', uncoverCardA);
 
 var uncoverCardB = function(event){
   console.log(event);
@@ -73,10 +74,9 @@ var uncoverCardB = function(event){
       $squareB.removeClass('back');
       $squareB.addClass('wesley');
   }
-};
 
-$squareB.on('click', uncoverCardB);
-// $squareB.off('click', uncoverCardB);
+  pairs.push(event.target);
+};
 
 var uncoverCardC = function(event){
   console.log(event);
@@ -84,11 +84,8 @@ var uncoverCardC = function(event){
   if ($squareC.hasClass('back')) {
       $squareC.removeClass('back');
       $squareC.addClass('wesley');
-  }
+  } pairs.push(event.target);
 };
-
-$squareC.on('click', uncoverCardC);
-// $squareC.off('click', uncoverCardC);
 
 var uncoverCardD = function(event){
   console.log(event);
@@ -96,11 +93,8 @@ var uncoverCardD = function(event){
   if ($squareD.hasClass('back')) {
       $squareD.removeClass('back');
       $squareD.addClass('buttercup');
-  }
+  } pairs.push(event.target);
 };
-
-$squareD.on('click', uncoverCardD);
-// $squareD.off('click', uncoverCardD);
 
 var uncoverCardE = function(event){
   console.log(event);
@@ -108,11 +102,8 @@ var uncoverCardE = function(event){
   if ($squareE.hasClass('back')) {
       $squareE.removeClass('back');
       $squareE.addClass('bishop');
-  }
+  } pairs.push(event.target);
 };
-
-$squareE.on('click', uncoverCardE);
-// $squareE.off('click', uncoverCardE);
 
 var uncoverCardF = function(event){
   console.log(event);
@@ -120,11 +111,15 @@ var uncoverCardF = function(event){
   if ($squareF.hasClass('back')) {
       $squareF.removeClass('back');
       $squareF.addClass('vizzini');
-  }
+  } pairs.push(event.target);
 };
 
+$squareA.on('click', uncoverCardA);
+$squareB.on('click', uncoverCardB);
+$squareC.on('click', uncoverCardC);
+$squareD.on('click', uncoverCardD);
+$squareE.on('click', uncoverCardE);
 $squareF.on('click', uncoverCardF);
-// $squareF.off('click', uncoverCardF);
 
 var uncoverCardG = function(event){
   console.log(event);
@@ -132,11 +127,10 @@ var uncoverCardG = function(event){
   if ($squareG.hasClass('back')) {
       $squareG.removeClass('back');
       $squareG.addClass('inigo');
-  }
+  } pairs.push(event.target);
 };
 
 $squareG.on('click', uncoverCardG);
-// $squareG.off('click', uncoverCardG);
 
 var uncoverCardH = function(event){
   console.log(event);
@@ -144,11 +138,10 @@ var uncoverCardH = function(event){
   if ($squareH.hasClass('back')) {
       $squareH.removeClass('back');
       $squareH.addClass('fezzik');
-  }
+  } pairs.push(event.target);
 };
 
 $squareH.on('click', uncoverCardH);
-// $squareH.off('click', uncoverCardH);
 
 var uncoverCardI = function(event){
   console.log(event);
@@ -156,11 +149,10 @@ var uncoverCardI = function(event){
   if ($squareI.hasClass('back')) {
       $squareI.removeClass('back');
       $squareI.addClass('max');
-  }
+  } pairs.push(event.target);
 };
 
 $squareI.on('click', uncoverCardI);
-// $squareI.off('click', uncoverCardI);
 
 var uncoverCardJ = function(event){
   console.log(event);
@@ -168,11 +160,10 @@ var uncoverCardJ = function(event){
   if ($squareJ.hasClass('back')) {
       $squareJ.removeClass('back');
       $squareJ.addClass('buttercup');
-  }
+  } pairs.push(event.target);
 };
 
 $squareJ.on('click', uncoverCardJ);
-// $squareJ.off('click', uncoverCardJ);
 
 var uncoverCardK = function(event){
   console.log(event);
@@ -180,11 +171,10 @@ var uncoverCardK = function(event){
   if ($squareK.hasClass('back')) {
       $squareK.removeClass('back');
       $squareK.addClass('rous');
-  }
+  } pairs.push(event.target);
 };
 
 $squareK.on('click', uncoverCardK);
-// $squareK.off('click', uncoverCardK);
 
 var uncoverCardL = function(event){
   console.log(event);
@@ -192,11 +182,10 @@ var uncoverCardL = function(event){
   if ($squareL.hasClass('back')) {
       $squareL.removeClass('back');
       $squareL.addClass('max');
-  }
+  } pairs.push(event.target);
 };
 
 $squareL.on('click', uncoverCardL);
-// $squareL.off('click', uncoverCardL);
 
 var uncoverCardM = function(event){
   console.log(event);
@@ -204,11 +193,10 @@ var uncoverCardM = function(event){
   if ($squareM.hasClass('back')) {
       $squareM.removeClass('back');
       $squareM.addClass('fezzik');
-  }
+  } pairs.push(event.target);
 };
 
 $squareM.on('click', uncoverCardM);
-// $squareM.off('click', uncoverCardM);
 
 var uncoverCardN = function(event){
   console.log(event);
@@ -216,11 +204,10 @@ var uncoverCardN = function(event){
   if ($squareN.hasClass('back')) {
       $squareN.removeClass('back');
       $squareN.addClass('inigo');
-  }
+  } pairs.push(event.target);
 };
 
 $squareN.on('click', uncoverCardN);
-// $squareN.off('click', uncoverCardN);
 
 var uncoverCardO = function(event){
   console.log(event);
@@ -232,46 +219,77 @@ var uncoverCardO = function(event){
 };
 
 $squareO.on('click', uncoverCardO);
-// $squareO.off('click', uncoverCardO);
 
 var uncoverCardP = function(event){
   console.log(event);
 
+  var characterClass = 'rous';
+
+  clicks++;
+
+
   if ($squareP.hasClass('back')) {
+      $squareP.addClass(characterClass);
       $squareP.removeClass('back');
-      $squareP.addClass('rous');
-  } pairs.push(square);
+  }
+
+  checkForMatch($squareP, characterClass);
+
+  pairs.push(event.target);
 };
 
 $squareP.on('click', uncoverCardP);
-// $squareP.off('click', uncoverCardP);
+
+// !!!! now that a character has been assigned to cards and shows up on clicks, need to make sure the user can't uncover more than two cards at a time. 
+
 
 // -- when a user clicks two cards, check for a match, if no match, flip cards back. if yes, keep both cards uncovered.
-var checkForMatch = function(){
-	if (pairs[0].classList === pairs[1].classList) {
-		matches++
-		pairs.length = 0;
-		return 
-		//leave cards uncovered if match
-		//also want to empty the pairs array so new cards can be pushed in to check for a match
-	} else {
-		//cover cards back if no match
-		squares[i].removeClass(cardFronts[i])
-	}
-};
-
-
-// var saveFrontToSquares = function(){
-// 	var cardFronts;
-// 	var squares;
-// 	for (var i = 0; i < cardFronts.length; i++) { // goal is to iterate through cardFronts, grab one value (make sure that value isn't available in further iterations)
-// 		var twoSquares = function(){}; // take the value grabbed from above and assign it to two random squares. (make sure those squares are not available anymore)
-// 	};
+// var checkForMatch = function(){
+//     if (pairs[0].classList === pairs[1].classList) {
+//         matches++
+//         pairs.length = 0;
+//         return 
+//         //leave cards uncovered if match
+//         //also want to empty the pairs array so new cards can be pushed in to check for a match
+//     } else {
+//         //cover cards back if no match
+//         squares[i].removeClass(cardFronts[i])
+//     }
 // };
 
 
-// now that a character has been assigned to cards and shows up on clicks, need to make sure the user can't uncover more than two cards at a time. 
-var clicks = 0;
+var previousCardCharacterClass;
+
+var checkForMatch = function($currentCard, currentCardCharacterClass) {
+
+    if (clicks === 1) {
+        // if first card of a pair is clicked
+        // no previousCard
+        // adopt the character class of the card that has been clicked
+        previousCardCharacterClass = currentCardCharacterClass;
+    } else if (clicks === 2) {
+        // if second card of a pair is clicked
+        // compare previous card and current card
+        // do they have matching character classes
+        if (previousCardCharacterClass === currentCardCharacterClass) {
+            matches++;
+        } else {
+            // turn the cards back around
+            $currentCard.removeClass(currentCardCharacterClass);
+            $currentCard.addClass('back');
+        }
+
+        clicks = 0;
+    }
+};
+
+
+
+// var saveFrontToSquares = function(){
+//  for (var i = 0; i < cardFronts.length; i++) { // goal is to iterate through cardFronts, grab one value (make sure that value isn't available in further iterations)
+//      var twoSquares = function(){}; // take the value grabbed from above and assign it to two random squares. (make sure those squares are not available anymore)
+//  };
+// };
 
 // need to do some kind of function for firstCard and secondCard?
 
@@ -279,7 +297,7 @@ var clicks = 0;
 var chooseCard = function(square){ //square will be the index of squares array
  //if 2 clicks have been made
  if (clicks = 2){
- 	return checkForMatch();
+    return checkForMatch();
  }
  // check if the cards match
 
@@ -313,7 +331,18 @@ var shuffleCharacters = function shuffleCharacters(array) {
 // shuffleCharacters(cardFronts);
 
 var hitReset = function(){
-	//when #resetBtn is clicked, run the shuffle Characters function.
+    //when #resetBtn is clicked, run the shuffle Characters function.
 }
 
+
+
+
+
+
+
+// EXTRA/BONUS FEATURES (if you have time):
+//  - when a match occurs, have a soundbyte
+// button to turn sounds off
+// theme song upon opening the game (when a soundbyte for match is played, pause theme song)
+// button for turning off music (separate from sound)
 
