@@ -226,7 +226,7 @@ var uncoverCardO = function(event){
   if ($squareO.hasClass('back')) {
       $squareO.removeClass('back');
       $squareO.addClass('vizzini');
-  }
+  } pairs.push(event.target);
 };
 
 $squareO.on('click', uncoverCardO);
@@ -238,7 +238,7 @@ var uncoverCardP = function(event){
   if ($squareP.hasClass('back')) {
       $squareP.removeClass('back');
       $squareP.addClass('rous');
-  }
+  } pairs.push(square);
 };
 
 $squareP.on('click', uncoverCardP);
@@ -247,39 +247,40 @@ $squareP.on('click', uncoverCardP);
 //have empty array of card pairs to push cards that have been clicked into
 var pairs = [];
 
-var compareCards = function(square) {
-	if (event.target.hasClass('rous')){
-		pairs.push(square);
-	} else if (event.target.hasClass('vizzini')){
-		pairs.push(square);
-	} else if (event.target.hasClass('inigo')){
-		pairs.push(square);
-	} else if (event.target.hasClass('bishop')){
-		pairs.push(square);
-	} else if (event.target.hasClass('fezzik')){
-		pairs.push(square);
-	} else if (event.target.hasClass('max')){
-		pairs.push(square);
-	} else if (event.target.hasClass('buttercup')){
-		pairs.push(square);
-	} else if (event.target.hasClass('wesley')){
-		pairs.push(square);
-	} else if (event.target.hasClass('rous')){
-		pairs.push(square);
-	} else {
-		return square;
-	}
-};
+// var pushCards = function(square) {
+// 	if (event.target.hasClass('rous')){
+// 		pairs.push(square);
+// 	} else if (event.target.hasClass('vizzini')){
+// 		pairs.push(square);
+// 	} else if (event.target.hasClass('inigo')){
+// 		pairs.push(square);
+// 	} else if (event.target.hasClass('bishop')){
+// 		pairs.push(square);
+// 	} else if (event.target.hasClass('fezzik')){
+// 		pairs.push(square);
+// 	} else if (event.target.hasClass('max')){
+// 		pairs.push(square);
+// 	} else if (event.target.hasClass('buttercup')){
+// 		pairs.push(square);
+// 	} else if (event.target.hasClass('wesley')){
+// 		pairs.push(square);
+// 	} else if (event.target.hasClass('rous')){
+// 		pairs.push(square);
+// 	} else {
+// 		return square;
+// 	}
+// }; // <------- I commented this out because I thought I might just be able to .push the square when I'm doing my uncoverCardX functions. I figured it's the same thing.
 
 // -- when a user clicks two cards, check for a match, if no match, flip cards back. if yes, keep both cards uncovered.
 var checkForMatch = function(){
-  var matches;
-  var paira
-	if (pairs[0] === pairs[1]) {
-		return matches++
+	if (pairs[0].classList === pairs[1].classList) {
+		matches++
+		pairs.length = 0;
+		return 
 		//leave cards uncovered if match
+		//also want to empty the pairs array so new cards can be pushed in to check for a match
 	} else {
-		//cover cards  back if no match
+		//cover cards back if no match
 		squares[i].removeClass(cardFronts[i])
 	}
 };
@@ -297,17 +298,21 @@ var checkForMatch = function(){
 // now that a character has been assigned to cards and shows up on clicks, need to make sure the user can't uncover more than two cards at a time. 
 var clicks = 0;
 
-
-
-// need to do some kind of function for firstCard and secondCard
+// need to do some kind of function for firstCard and secondCard?
 
 // choosing a card
 var chooseCard = function(square){ //square will be the index of squares array
  //if 2 clicks have been made
- // do nothing
+ if (clicks = 2){
+ 	return checkForMatch();
+ }
+ // check if the cards match
 
  //if no clicks,
- //store card index in firstCard
+ if (clicks = 0){
+
+ }
+ //store card index of clicked div in firstCard
  //show image corresponding to first card clicked
  //set clicks to 1
 
