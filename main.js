@@ -23,11 +23,6 @@ var $squareN = $('#sqrN');
 var $squareO = $('#sqrO');
 var $squareP = $('#sqrP');
 
-var clicks; // how many times has the user clicked?
-var matches; //how many matches have been made
-var firstCard; 
-var secondCard;
-
 // save front of card images to their own variables
 var $wesley = $('.wesley');
 var $buttercup = $('.buttercup');
@@ -39,6 +34,13 @@ var $rous = $('.rous');
 var $vizzini = $('.vizzini');
 var cardFronts = [$wesley, $buttercup, $fezzik, $inigo, $bishop, $max, $rous, $vizzini]; //array that stores the images for the front of cards
 var $cardBack = $('.back'); //back of card when turned over
+
+//have empty array of card pairs to push cards that have been clicked into
+var pairs = [];
+var clicks; // how many times has the user clicked?
+var matches; //how many matches have been made
+var firstCard; 
+var secondCard;
 
 var squares = [
 	[$squareA, $squareB, $squareC, $squareD],
@@ -244,33 +246,6 @@ var uncoverCardP = function(event){
 $squareP.on('click', uncoverCardP);
 // $squareP.off('click', uncoverCardP);
 
-//have empty array of card pairs to push cards that have been clicked into
-var pairs = [];
-
-// var pushCards = function(square) {
-// 	if (event.target.hasClass('rous')){
-// 		pairs.push(square);
-// 	} else if (event.target.hasClass('vizzini')){
-// 		pairs.push(square);
-// 	} else if (event.target.hasClass('inigo')){
-// 		pairs.push(square);
-// 	} else if (event.target.hasClass('bishop')){
-// 		pairs.push(square);
-// 	} else if (event.target.hasClass('fezzik')){
-// 		pairs.push(square);
-// 	} else if (event.target.hasClass('max')){
-// 		pairs.push(square);
-// 	} else if (event.target.hasClass('buttercup')){
-// 		pairs.push(square);
-// 	} else if (event.target.hasClass('wesley')){
-// 		pairs.push(square);
-// 	} else if (event.target.hasClass('rous')){
-// 		pairs.push(square);
-// 	} else {
-// 		return square;
-// 	}
-// }; // <------- I commented this out because I thought I might just be able to .push the square when I'm doing my uncoverCardX functions. I figured it's the same thing.
-
 // -- when a user clicks two cards, check for a match, if no match, flip cards back. if yes, keep both cards uncovered.
 var checkForMatch = function(){
 	if (pairs[0].classList === pairs[1].classList) {
@@ -337,5 +312,8 @@ var shuffleCharacters = function shuffleCharacters(array) {
 
 // shuffleCharacters(cardFronts);
 
+var hitReset = function(){
+	//when #resetBtn is clicked, run the shuffle Characters function.
+}
 
 
