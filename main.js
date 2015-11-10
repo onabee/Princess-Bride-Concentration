@@ -1,7 +1,8 @@
 console.log("linked!");
 
-// var themeSong = new Audio("file.wav"); // buffers automatically when created
-// themeSong.play();
+var themeSong = new Audio("sounds/once-upon-a-time.mp3"); // buffers automatically when created
+themeSong.play();
+
 
 // a  |  b  |  c  |  d  
 // e  |  f  |  g  |  h
@@ -373,7 +374,7 @@ var checkForMatch = function($currentCard, currentCardCharacterClass) {
             matches++;
         } else {
             // turn the cards back around
-            window.setTimeout(flipCard, 2000);
+            window.setTimeout(flipCard, 1500);
         }
         clicks = 0;
     }
@@ -381,21 +382,20 @@ var checkForMatch = function($currentCard, currentCardCharacterClass) {
 
 
 // -- randomize which character will be on which cards (this can be at the end when you figure out everything else. this is for when you hit reset probably)
-var shuffleCharacters = function shuffleCharacters(array) {
-    for (var i = array.length - 1; i > 0; i--) { //Loops through each of the values between the array length and one, decrementing the loop variable for each iteration.
-        var j = Math.floor(Math.random() * (i + 1)); //math floor rounds to nearest integer so you don't get a decimal. math random will give a number between 0 and whatever the index (i) is. 
-        var temporaryIndex = array[i];
-        array[i] = array[j];
-        array[j] = temporaryIndex;
-    };
-    return array;
-};
+// var shuffleCharacters = function shuffleCharacters(cardFronts) {
+//     for (var i = cardFronts.length - 1; i > 0; i--) { //Loops through each of the values between the array length and one, decrementing the loop variable for each iteration.
+//         var j = Math.floor(Math.random() * (i + 1)); //math floor rounds to nearest integer so you don't get a decimal. math random will give a number between 0 and whatever the index (i) is. 
+//         var temporaryIndex = cardFronts[i];
+//         cardFronts[i] = cardFronts[j];
+//         cardFronts[j] = temporaryIndex;
+//     };
+//     return cardFronts;
+// };
 
-// shuffleCharacters(cardFronts);
+// // shuffleCharacters(cardFronts);
 
-var hitReset = function(){
+// $('#resetBtn').on('click', shuffleCharacters);
     //when #resetBtn is clicked, run the shuffle Characters function.
-}
 
 
 
