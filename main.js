@@ -71,7 +71,7 @@ var uncoverCardA = function(event){
       $squareA.removeClass('back');
   }
 
-  checkForMatch($squareG, characterClass);
+  checkForMatch($squareA, characterClass);
   
 };
 
