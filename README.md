@@ -22,4 +22,4 @@ JS
 jQuery
 
 #### Link to app:
-http://onabee.github.io/project1/
+http://onabee.github.io/princess-bride-concentration/
